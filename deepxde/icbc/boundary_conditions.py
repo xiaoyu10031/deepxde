@@ -37,7 +37,7 @@ class BC(ABC):
     def __init__(self, geom, on_boundary, component):
         self.geom = geom
         self.on_boundary = lambda x, on: np.array(
-            [on_boundary(x[i], on[i]) for i in range(len(x))]
+            [on_boundary(x[i], on[i]) for i in range(len(x))] # the definition of the function of on_boundary
         )
         self.component = component
 
