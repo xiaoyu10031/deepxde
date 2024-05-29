@@ -141,7 +141,7 @@ class PDE(Data):
             outputs_pde = (outputs, aux[0])
 
         f = []
-        if self.pde is not None:
+        if self.pde is not None: # pde函数不是None，则读取pde函数的输入参数的数量
             if get_num_args(self.pde) == 2:
                 f = self.pde(inputs, outputs_pde)
             elif get_num_args(self.pde) == 3:
